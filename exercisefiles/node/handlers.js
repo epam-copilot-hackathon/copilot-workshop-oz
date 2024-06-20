@@ -1,6 +1,7 @@
 const fs = require('fs');
 const getHandler = require('./handlers/get');
 const daysBetweenDatesHandler = require('./handlers/daysBetweenDates');
+const validatePhoneNumberHandler = require('./handlers/validatePhoneNumber');
 
 // write a nodejs server that will expose a method call "get" that will return the value of the key passed in the query string
 // example: http://localhost:3000/get?key=hello
@@ -10,7 +11,8 @@ const daysBetweenDatesHandler = require('./handlers/daysBetweenDates');
 // when server is listening, log "server is listening on port 3000"
 const handlers = {
     '/get': getHandler,
-    '/daysBetweenDates': daysBetweenDatesHandler
+    '/daysBetweenDates': daysBetweenDatesHandler,
+    '/validatePhoneNumber': validatePhoneNumberHandler
 };
-exports.handlers = handlers;
 
+exports.handlers = handlers;
