@@ -1,6 +1,6 @@
 const validatePhoneNumber = (phoneNumber) => {
-    // Regular expression to validate Spanish phone numbers
-    const phoneRegex = /^\+34\d{9}$/;
+    // Regular expression to validate any phone number
+    const phoneRegex = /^\+\d{1,3}\d{9}$/;
 
     console.log(phoneRegex.test(phoneNumber));
     console.log("" + phoneNumber);

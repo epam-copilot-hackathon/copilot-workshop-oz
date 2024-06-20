@@ -228,4 +228,12 @@ describe('Node Server', () => {
         const response = await axios.get(`http://localhost:3000/validatePhoneNumber?phoneNumber=${phoneNumber}`);
         assert.strictEqual(response.data, 'valid');
     });
+
+
+    // write a test for validatePhoneNumber endpoint with a valid phone number and escape characters
+    it('should return true for a valid phone number with escape plus characters', async function () {
+        const phoneNumber = "%2B34666723488";
+        const response = await axios.get(`http://localhost:3000/validatePhoneNumber?phoneNumber=${phoneNumber}`);
+        assert.strictEqual(response.data, 'valid');
+    });
 });
